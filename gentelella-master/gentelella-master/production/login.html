@@ -1,103 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Municipalidad </title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+  <title>Municipalidad </title>
 
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
 
-  <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
 
-      <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form>
-              <h1>Inicio de Sesion</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Usuario" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Contraseña" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Iniciar</a>
-                <a class="reset_pass" href="#">Si olvidas tu contraseña comunicate con el programador</a>
-              </div>
+<body class="login">
+  <div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
 
-              <div class="clearfix"></div>
+    <div class="login_wrapper">
+      <div class="animate form login_form">
+        <section class="login_content">
+          <form action="php/login.php" method="post">
+            <h1>Inicio de Sesion</h1>
+            <div>
+              <input type="text" name="usuarioIngresar" class="form-control" placeholder="Usuario" required="" />
+            </div>
+            <div>
+              <input type="password" name="passwordIngresar" class="form-control" placeholder="Contraseña"
+                required="" />
+            </div>
+            <div>
+              <!--BOTON SUBMIT PARA LOGIN-->
+              <input class="btn btn-gray" style="width: 75%;" type="submit" value="iniciar" name="b1">
+              <!--BOTON SUBMIT PARA LOGIN-->
+              <a class="reset_pass" href="#">Si olvidas tu contraseña comunicate con el programador</a>
+            </div>
 
-              <div class="separator">
-                <p class="change_link">No tienes cuenta?
-                  <a href="#signup" class="to_register"> Comunicate con el area de desarrollo </a>
-                </p>
+            <div class="clearfix"></div>
 
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Municipalidad de Villa Nueva</h1>
-                  <p>Bienvenido a nuestra hermosa comunidad, esperamos logres mantener la privacidad de nuestro sistema</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
-
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
-              </div>
+            <div class="separator">
+              <p class="change_link">No tienes cuenta?
+                <a href="#signup" class="to_register"> Comunicate con el area de desarrollo </a>
+              </p>
 
               <div class="clearfix"></div>
+              <br />
 
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
+              <div>
+                <h1><i class="fa fa-paw"></i> Municipalidad de Villa Nueva</h1>
+                <p>Bienvenido a nuestra hermosa comunidad, esperamos logres mantener la privacidad de nuestro sistema
                 </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
               </div>
-            </form>
-          </section>
-        </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <div id="register" class="animate form registration_form">
+        <section class="login_content">
+          <form method="post" action="php/login.php">
+            <h1>Create Account</h1>
+
+            <div>
+              <input type="text" class="form-control" placeholder="Nombre" name="nombreNuevo" required="" />
+            </div>
+            <div>
+              <input type="password" class="form-control" placeholder="Contraseña" name="passNueva" required="" />
+            </div>
+            <div>
+              <!--BOTON SUBMIT PARA LOGIN-->
+              <input class="btn btn-gray" style="width: 75%;" type="submit" value="Crear cuenta" name="b2">
+              <!--BOTON SUBMIT PARA LOGIN-->
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="separator">
+              <p class="change_link">Already a member ?
+                <a href="#signin" class="to_register"> Log in </a>
+              </p>
+
+              <div class="clearfix"></div>
+              <br />
+
+              <div>
+                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+              </div>
+            </div>
+          </form>
+        </section>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
