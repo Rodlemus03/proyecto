@@ -17,7 +17,11 @@ if(isset($_POST['b1'])){
         $rolCotejo=$r['rol'];}
     }
     if($bandera==1){
-        if($rolCotejo=='administrador'){
+        if($rolCotejo=="superusuario"){
+            echo "<script>window.location='../index.html';</script>";
+
+        }
+        else if($rolCotejo=='administrador'){
             echo "<script>window.location='../administrativo.html';</script>";
         }else if($rolCotejo="regular"){
             echo "<script>window.location='../regular.html';</script>";
